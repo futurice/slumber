@@ -20,7 +20,7 @@ if sys.argv[-1] == 'syncci':
     sys.exit();
 
 setup(
-    name = "slumber",
+    name = "slumber-fork",
     version = version,
     description = "A library that makes consuming a REST API easier and more convenient",
     long_description="\n\n".join([

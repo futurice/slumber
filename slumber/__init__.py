@@ -179,13 +179,14 @@ class Resource(ResourceAttributesMixin, object):
 
 class API(ResourceAttributesMixin, object):
 
-    def __init__(self, base_url=None, auth=None, format=None, append_slash=True, session=None, serializer=None):
+    def __init__(self, base_url=None, auth=None, format=None, append_slash=True, session=None, serializer=None, verify=True):
         if serializer is None:
             serializer = Serializer(default=format)
 
         if session is None:
             session = requests.session()
             session.auth = auth
+            session.verify = verify
 
         self._store = {
             "base_url": base_url,

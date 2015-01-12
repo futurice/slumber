@@ -7,7 +7,7 @@ tests_require = ["mock"]
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
-version = "0.6.2"
+version = "0.6.3"
 
 if sys.argv[-1] == 'publish':
     os.system("git tag -a %s -m 'v%s'" % (version, version))
@@ -22,12 +22,12 @@ if sys.argv[-1] == 'syncci':
 setup(
     name = "slumber-fork",
     version = version,
-    description = "A library that makes consuming a REST API easier and more convenient",
+    description = "Fork of Slumber, A library that makes consuming a REST API easier and more convenient",
     long_description="\n\n".join([
         open(os.path.join(base_dir, "README.rst"), "r").read(),
         open(os.path.join(base_dir, "CHANGELOG.rst"), "r").read()
     ]),
-    url = "http://github.com/samgiles/slumber",
+    url = "http://github.com/futurice/slumber",
     author = "Donald Stufft",
     author_email = "donald.stufft@gmail.com",
     maintainer = "Samuel Giles",
